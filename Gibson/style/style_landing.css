@@ -1,0 +1,252 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Pacifico|Prompt|Righteous|Fjalla+One');
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    overflow-x: hidden;
+}
+header:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 1880px;
+    background: url(../images/bg_shadow.png);
+    z-index:2;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.body_slides {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: -2;
+    background: #000;
+}
+.body_slides,
+.body_slides:after {
+    position: relative;
+    width: 100%;
+    height: 720px;
+    top: 0px;
+    left: 0px;
+}
+.body_slides:after {
+    content: '';
+    background: transparent repeat top left;
+}
+
+.body_slides li {
+    width: 100%;
+    height: 720px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-repeat: none;
+    opacity: 0;
+    -webkit-animation: anim_slides 18s ease-in-out infinite 0s;
+    -o-animation: anim_slides 18s ease-in-out infinite 0s;
+    -ms-animation: anim_slides 18s ease-in-out infinite 0s;
+    animation: anim_slides 18s ease-in-out infinite 0s;
+}
+.body_slides li:nth-child(1){
+    background-image: url(../images/bg1.png);
+}
+.body_slides li:nth-child(2){
+    -webkit-animation-delay: 6.0s;
+    -moz-animation-delay: 6.0s;
+    background-image: url(../images/bg2.png);
+}
+.body_slides li:nth-child(3){
+    -webkit-animation-delay: 12.0s;
+    -moz-animation-delay: 12.0s;
+    background-image: url(../images/bg3.png);
+}
+@-webkit-keyframes anim_slides {
+    0% {opacity: 0;}
+    6% {opacity: 1;}
+    24% {opacity: 1;}
+    30% {opacity: 0;}
+    100% {opacity: 0;}
+}
+h2 {
+    font-family: Pacifico;
+    color: #fff;
+    position: absolute;
+    top: 4px;
+    left: 100px;
+    font-size: 50px;
+    z-index: 3;
+}
+
+.logo {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 110px;
+    z-index: 3;
+}
+.menu {
+    width: 900px;
+    margin: 0;
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 200px;
+    z-index: 3;
+}
+
+.menu ul {
+    list-style: none;
+    font-family: Prompt;
+    font-size: 35px;
+}
+.menu ul li {
+    margin: 40px 60px;
+    float: right;
+    background: gray;
+    border-radius: 20px;
+    letter-spacing: 4px;
+    padding: 0px 7px;
+    opacity: 0.5;
+    transition: .3s;
+}
+.menu ul li:hover {
+    background: #9d9c9e;
+    opacity: 1;
+}
+.union {
+    position: absolute;
+    top: 370px;
+    padding-left: 180px;
+    font-size: 60px;
+    color: white;
+    font-family: Prompt;
+    letter-spacing: 7px;
+    z-index: 3;
+}
+
+/*Here where the landing ends and main starts*/
+
+.middle {
+    width: 100%;
+    height: 400px;
+    background: url(../images/bg_block2.png);
+    -webkit-background-size: 100% 800px;
+    background-size: 100% 800px;
+}
+
+.logo1 {
+    position: absolute;
+    right: 0;
+    top: 750px;
+    z-index: 3;
+    width: 140px;
+}
+
+.gallery {
+    position: relative;
+    font-family: Fjalla One;
+    z-index: 3;
+    font-size: 100px;
+    top: 100px;
+    left: 50px;
+    color: white;
+    letter-spacing: 8px;
+}
+
+.show_button {
+    position: absolute;
+    z-index: 3;
+    right: 60px;
+    top: 960px;
+    height: 100px;
+    width: 350px;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 40px;
+    background: linear-gradient(90deg, #d9d9d9, #f7f7f7);
+    letter-spacing: 7px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, .8);
+    font-weight: 700;
+    cursor: pointer;
+    font-family: Fjalla One;
+}
+
+.show_button:active {
+    background: linear-gradient(90deg, dimgrey, black);
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    transform: translate(3px, 3px);
+}
+
+/*Here bottom starts*/
+
+.bottom {
+    width: 100%;
+    height: 760px;
+    background: url(../images/bg_block3.png);
+    background-repeat: no-repeat;
+}
+
+.logo2 {
+    position: relative;
+    z-index: 3;
+    top: 20px;
+    width: 140px;
+}
+
+.tour {
+    position: absolute;
+    z-index: 3;
+    color: white;
+    font-size: 130px;
+    font-weight: 800px;
+    letter-spacing: 8px;
+    font-family: fjalla one;
+    right: 40px;
+}
+
+.cities {
+    position: absolute;
+    z-index: 3;
+    top: 1400px;
+    right: 40px;
+    text-align: right;
+    font-family: Fjalla One;
+    color: white;
+    font-size: 50px;
+    list-style: none;
+    letter-spacing: 7px;
+}
+.cities li {
+    margin: 20px 0 20px 0;
+}
+
+.tour_button {
+    position: absolute;
+    z-index: 3;
+    right: 60px;
+    top: 1730px;
+    height: 100px;
+    width: 350px;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 40px;
+    background: linear-gradient(90deg, #d9d9d9, #f7f7f7);
+    letter-spacing: 7px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, .8);
+    font-weight: 700;
+    cursor: pointer;
+    font-family: Fjalla One;
+}
+.tour_button:active {
+    background: linear-gradient(90deg, dimgrey, black);
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    transform: translate(3px, 3px);
+}
